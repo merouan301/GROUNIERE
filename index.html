@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grounière Bébé | فخامة العيد لأطفالكم</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="badge animated-badge">🔥 عرض حصري للعيد الكبير 🎁</div>
+        <h1 class="brand-name">Grounière Bébé</h1>
+        <h2 class="product-title">طرز القمصان الجزائري الأصيل</h2>
+        <p class="hero-desc">امنح طفلك إطلالة تجمع بين فخامة التراث ونعومة القطن العالمي</p>
+        <a href="#orderForm" class="quick-order-btn">اطلب الآن <i class="fas fa-arrow-down"
+        <div class="features-chips">
+            <span><i class="fas fa-baby"></i> 3-6 أشهر</span>
+            <span><i class="fas fa-leaf"></i> قطن 100%</span>
+            <span><i class="fas fa-truck"></i> توصيل 58 ولاية</span>
+        </div>
+    </header>
+    <section class="product-gallery">
+    <div class="main-image">
+        <img src="path-to-black-image.jpg" id="current-img" alt="Grounière Bébé">
+    </div>
+    <div class="thumbnails">
+        <img src="https://m.media-amazon.com/images/I/41jsgwPce+L._AC_SY350_QL15_.jpg" onclick="changeImage(this.src)" class="active-thumb">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9WBSo8RS86UxtbfI35WYfMWX5D5-qNo2Ng&s" onclick="changeImage(this.src)">
+        <img src="https://m.media-amazon.com/images/I/41jsgwPce+L._AC_SY350_QL15_.jpg" onclick="changeImage(this.src)">
+    </div>
+</section>
+    <main class="container">
+        <!-- قسم لماذا نحن؟ -->
+        <section class="card benefit-card">
+            <h3 class="section-title">لماذا تختار Grounière Bébé؟</h3>
+            <ul class="benefit-list">
+                <li><i class="fas fa-check-circle"></i> طرز يدوي متقن بكل حب 🧶</li>
+                <li><i class="fas fa-check-circle"></i> قماش ناعم جداً لا يسبب الحساسية 🌿</li>
+                <li><i class="fas fa-check-circle"></i> ألوان ملكية: أسود فخم وأزرق سماوي 🎨</li>
+                <li><i class="fas fa-check-circle"></i> تغليف "بريميوم" جاهز للإهداء 📦</li>
+            </ul>
+        </section>
+
+        <!-- نموذج الطلب -->
+        <section class="card order-card">
+            <div class="form-header">
+                <h3>اطلب الآن (الدفع عند الاستلام) 🛒</h3>
+                <p>الكمية محدودة جداً، احجز قطعة طفلك الآن</p>
+            </div>
+
+            <form id="orderForm">
+                <div class="input-group">
+                    <label>الاسم الكامل</label>
+                    <input type="text" name="name" placeholder="مثال: محمد الأمين" required>
+                </div>
+
+                <div class="input-group">
+                    <label>رقم الهاتف</label>
+                    <input type="tel" name="phone" placeholder="05/06/07 00 00 00 00" required>
+                </div>
+
+           <!-- استبدل حقل العنوان القديم في الفورم بهذا الكود -->
+                <!-- استبدل قسم الولاية والبلدية بهذا الكود -->
+<div class="input-group">
+    <label>الولاية</label>
+    <input list="wilayas" name="wilaya" id="wilaya-input" placeholder="اكتب اسم الولاية للبحث..." required>
+    <datalist id="wilayas">
+        <!-- سيتم ملؤها بواسطة الجافا سكريبت -->
+    </datalist>
+</div>
+
+<div class="input-group">
+    <label>البلدية</label>
+    <input list="communes" name="commune" id="commune-input" placeholder="اكتب اسم البلدية..." required disabled>
+    <datalist id="communes">
+        <!-- سيتم ملؤها ديناميكياً -->
+    </datalist>
+</div>
+
+                <label>اختر اللون المفصل</label>
+                <div class="selection-grid">
+                    <input type="radio" name="color" value="أسود" id="black" required>
+                    <label for="black" class="select-box">
+                        <span class="color-dot black"></span>
+                        <b>أسود</b>
+                        <small>Noire</small>
+                    </label>
+
+                    <input type="radio" name="color" value="أزرق" id="blue">
+                    <label for="blue" class="select-box">
+                        <span class="color-dot blue"></span>
+                        <b>أزرق</b>
+                        <small>Bleue</small>
+                    </label>
+                </div>
+
+                <label>المقاس المتوفر</label>
+                <div class="selection-grid">
+                    <input type="radio" name="size" value="3 أشهر" id="size3" required>
+                    <label for="size3" class="select-box"><b>3 أشهر</b></label>
+
+                    <input type="radio" name="size" value="6 أشهر" id="size6">
+                    <label for="size6" class="select-box"><b>6 أشهر</b></label>
+                </div>
+
+                <button type="submit" id="submitBtn" class="primary-btn">
+                    <span>أرسل طلبك الآن</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <p class="guarantee"><i class="fas fa-shield-alt"></i> ضمان الجودة وإمكانية التبديل</p>
+            </form>
+            
+            <div id="successMsg" class="success-container hidden">
+                <i class="fas fa-check-circle"></i>
+                <h4>تم استلام طلبك بنجاح!</h4>
+                <p>سنتصل بك في أقل من 24 ساعة لتأكيد التوصيل.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
